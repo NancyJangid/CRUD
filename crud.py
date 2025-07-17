@@ -8,7 +8,7 @@ cursor = conn.cursor()
 cursor.execute("Select * from Items")
 data = cursor.fetchall()
 columns = [desc[0] for desc in cursor.description]
-print(columns,data)
+
 
 cursor.close()
 conn.close()
