@@ -8,18 +8,7 @@ cursor = conn.cursor()
 cursor.execute("Select * from Items")
 data = cursor.fetchall()
 columns = [desc[0] for desc in cursor.description]
-print(columns)
-print(data)
-
-lst = []
-dic={}
-for row in data:
- 
-    for y in range (len(columns)):
-        dic[columns[y]] = row[y] 
-    lst.append(dic)
-print(lst)
-print(dic)
+print(columns,data)
 
 cursor.close()
 conn.close()
